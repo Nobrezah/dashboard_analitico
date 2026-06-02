@@ -1,0 +1,31 @@
+import type { SaleRecord, KpiCard, TopProduct } from "@/types";
+
+export const salesData: SaleRecord[] = [
+  { month: "Jan", receita: 42000, despesa: 28000, lucro: 14000 },
+  { month: "Fev", receita: 38000, despesa: 25000, lucro: 13000 },
+  { month: "Mar", receita: 51000, despesa: 30000, lucro: 21000 },
+  { month: "Abr", receita: 47000, despesa: 27000, lucro: 20000 },
+  { month: "Mai", receita: 63000, despesa: 35000, lucro: 28000 },
+  { month: "Jun", receita: 58000, despesa: 32000, lucro: 26000 },
+  { month: "Jul", receita: 72000, despesa: 40000, lucro: 32000 },
+  { month: "Ago", receita: 68000, despesa: 38000, lucro: 30000 },
+  { month: "Set", receita: 79000, despesa: 42000, lucro: 37000 },
+  { month: "Out", receita: 85000, despesa: 45000, lucro: 40000 },
+  { month: "Nov", receita: 91000, despesa: 48000, lucro: 43000 },
+  { month: "Dez", receita: 98000, despesa: 52000, lucro: 46000 },
+];
+
+export const kpiCards: KpiCard[] = [
+  { title: "Receita Total", value: "R$ 792.000", change: 12.4, icon: "💰" },
+  { title: "Despesas",      value: "R$ 442.000", change: -3.2, icon: "📉" },
+  { title: "Lucro Líquido", value: "R$ 350.000", change: 18.7, icon: "📈" },
+  { title: "Clientes Ativos", value: "1.248",    change: 9.1,  icon: "👥" },
+];
+
+export const topProducts: TopProduct[] = [
+  { name: "Produto Alpha",   sales: 342, revenue: 68400,  trend: "up"     },
+  { name: "Produto Beta",    sales: 289, revenue: 57800,  trend: "up"     },
+  { name: "Produto Gamma",   sales: 201, revenue: 40200,  trend: "stable" },
+  { name: "Produto Delta",   sales: 167, revenue: 33400,  trend: "down"   },
+  { name: "Produto Epsilon", sales: 134, revenue: 26800,  trend: "up"     },
+];
