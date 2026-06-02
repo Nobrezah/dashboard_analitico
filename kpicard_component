@@ -1,0 +1,29 @@
+import type { KpiCard } from "@/types";
+
+interface KpiCardProps {
+  card: KpiCard;
+}
+
+export function KpiCardComponent({ card }: KpiCardProps) {
+  const isPositive = card.change >= 0;
+
+  return (
+    <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex items-start justify-between mb-4">
+        <span className="text-2xl">{card.icon}</span>
+        <span
+          className={`text-xs font-medium px-2 py-1 rounded-full ${
+            isPositive
+              ? "bg-green-50 text-green-700"
+              : "bg-red-50 text-red-700"
+          }`}
+        >
+          {isPositive ? "+" : ""}
+          {card.change}%
+        </span>
+      </div>
+      <p className="text-sm text-gray-500 mb-1">{card.title}</p>
+      <p className="text-2xl font-bold text-gray-900">{card.value}</p>
+    </div>
+  );
+}
