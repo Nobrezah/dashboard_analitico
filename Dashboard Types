@@ -1,0 +1,20 @@
+export interface SaleRecord {
+  month: string;
+  receita: number;
+  despesa: number;
+  lucro: number;
+}
+
+export interface KpiCard {
+  title: string;
+  value: string;
+  change: number;
+  icon: string;
+}
+
+export interface TopProduct {
+  name: string;
+  sales: number;
+  revenue: number;
+  trend: "up" | "down" | "stable";
+}
